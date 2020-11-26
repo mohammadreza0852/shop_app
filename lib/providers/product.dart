@@ -30,8 +30,8 @@ class Product with ChangeNotifier {
     isFavorite = !isFavorite;
     notifyListeners();
     final url =
-        'https://flutter-update.firebaseio.com/userFavorites/$userId/$id.json?auth=$token';
-    try {
+       'https://shop-flutter-app-4abc2.firebaseio.com/userFavorites/$userId/$id.json?auth=$token';  
+     try {
       final response = await http.put(
         url,
         body: json.encode(
